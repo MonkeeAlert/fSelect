@@ -1,0 +1,91 @@
+/* Default library select */
+
+.feather-select  {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    font-family: Arial, sans-serif;
+}
+
+.feather-select:before {
+    content: '\25bc';
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    pointer-events: none;
+    text-align: center;
+    color: #333;
+    z-index: 1;
+}
+
+.feather-select:after {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background-color: #ddd;
+    right: 41px;
+    top: 0;
+    pointer-events: none;
+}
+
+.feather-select-placeholder,
+.feather-select-list,
+.feather-select-input {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.feather-select-placeholder,
+.feather-select-input {
+    padding: 10px 40px 10px 13px;
+    border: 1px solid #ddd;
+    background-color: #fdfdfd;
+    cursor: pointer;
+    position: relative;
+}
+
+.feather-select-input {
+    font-family: "Noto Sans", Arial, sans-serif;
+}
+
+.feather-select-list {
+    display: block;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-size: 0;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 200px;
+    overflow: auto;
+    z-index: 9;
+}
+
+.feather-select-list--opened {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.feather-select-list-item {
+    padding: 10px 13px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.feather-select-list-item--chosen {
+    background-color: #a9a9a9;
+}
+
+.feather-select-list-item--chosen:hover {
+    background-color: #f0f0f0;
+}
+
+.feather-select-list-item:hover {
+    background-color: #f3f3f3;
+}
