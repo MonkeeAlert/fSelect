@@ -1,5 +1,5 @@
 {
-  "name": "selectio",
+  "name": "featherSelect",
   "version": "1.0.1",
   "description": "Fully customizable select.",
   "main": "featherSelect.js",
