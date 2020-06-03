@@ -23,7 +23,7 @@ var fselect = new FSelect(document.getElementById('your-select'), {
   className: 'your-classname'         //  default: 'fselect'
 }, function() {
   console.log('works!');
-}
+});
 ```
 
 ### Methods
