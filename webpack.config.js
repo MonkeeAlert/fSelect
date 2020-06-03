@@ -2,10 +2,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry: {
-        main: "./src/js/featherSelect.js"
+        main: "./src/js/fSelect.js"
     },
     output: {
-        filename: 'featherSelect.js',
+        filename: 'fSelect.js',
         libraryTarget: 'umd',
         globalObject: "this"
     },
@@ -21,11 +21,17 @@ module.exports = {
                 ]
             },
             {
-                test: /\.css$/,
+                test: /\.sass|scss$/,
+                exclude: /node_modules/,
                 use: [
-                    "style-loader",
-                    MiniCssExtractPlugin.loader,
-                    "css-loader"
+                    MiniCssExtractPlugin.loader, 
+                    {
+                        loader: "css-loader",
+                        options: {
+                            importLoaders: 1,
+                        }
+                    },
+                    'sass-loader'
                 ]
             },
             {
@@ -41,5 +47,14 @@ module.exports = {
                 ]
             }
         ]
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: 'fSelect.css',
+            chunkFilename: 'fSelect.[hash].css',
+        })
+    ],
+    resolve: {
+        extensions: [ '.js', '.scss' ]
     }
 };

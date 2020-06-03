@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/feather-select.css">
+    <link rel="stylesheet" href="../scss/main.css">
+    <link rel="stylesheet" href="../../dist/fSelect.css">
 </head>
 <body class="page">
     <main class="main">
@@ -13,7 +13,6 @@
         </header>
         <section class="select-input block">
             <p class="text text--caption">Here is a simple example of Feather Select</p>
-            <p class="text text--comment"><i>Custom placeholder is "Choose"</i></p>
             <select name="select-input" id="custom-select" data-select-name="custom-select">
                 <option value="4">Armenia</option>
                 <option value="8">Canada</option>
@@ -35,18 +34,7 @@
             </select>
         </section>
         <section class="select-input block">
-            <p class="text text--caption">Also you can create select as input... </p>
-            <select name="select-input" id="input-select" data-select-name="input-select">
-                <option value="4">Armenia</option>
-                <option value="8">Canada</option>
-                <option value="15">China</option>
-                <option value="16">Austria</option>
-                <option value="23">Egypt</option>
-                <option value="42">Germany</option>
-            </select>
-        </section>
-        <section class="select-input block">
-            <p class="text text--caption">... make a callback function ...</p>
+            <p class="text text--caption">Also you make a callback function ...</p>
             <select name="select-input" id="callback-select" data-select-name="callback-select">
                 <option value="4">Armenia</option>
                 <option value="8">Canada</option>
@@ -55,11 +43,23 @@
                 <option value="23">Egypt</option>
                 <option value="42">Germany</option>
             </select>
-            <span class="text text--comment result"></span>
+            <span class="text text--comment result result-2"></span>
         </section>
         <section class="select-input block">
-            <p class="text text--caption">...and delete whole select in any time.</p>
-            <p class="text text--comment"> <i>Default select will be appeared.</i></p>
+            <p class="text text--caption">... or create an 'input' version ... </p>
+            <select name="select-input" id="input-select" data-select-name="input-select">
+                <option value="4">Armenia</option>
+                <option value="8">Canada</option>
+                <option value="15">China</option>
+                <option value="16">Austria</option>
+                <option value="23">Egypt</option>
+                <option value="42">Germany</option>
+            </select>
+            <span class="text text--comment result result-1"></span>
+        </section>
+        <section class="select-input block">
+            <p class="text text--caption">... or delete whole select.</p>
+            <p class="text text--comment"> <i>Default select will appear.</i></p>
             <select name="select-input" id="to-delete-select" data-select-name="to-delete-select">
                 <option value="4">Armenia</option>
                 <option value="8">Canada</option>
@@ -70,7 +70,7 @@
             </select>
             <button class="btn--delete">Remove select</button>
         </section>
-        <footer>
+        <!-- <footer>
             <p class="text text--center text--footer"><i>Feel free to ask or propose:</i></p>
             <ul class="footer-list text--center">
                 <li class="footer-list-item">
@@ -80,9 +80,9 @@
                     <a href="https://github.com/noContest" class="github"></a>
                 </li>
             </ul>
-        </footer>
+        </footer> -->
     </main>
-    <script src="../../dist/featherSelect.js"></script>
+    <script src="../../dist/fSelect.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>

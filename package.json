@@ -1,5 +1,5 @@
 {
-  "name": "featherSelect",
+  "name": "fSelect",
   "version": "1.0.1",
   "description": "Fully customizable select.",
   "main": "featherSelect.js",
@@ -7,7 +7,7 @@
     "watch": "webpack --mode development --watch",
     "build": "webpack --mode production --module-bind js=babel-loader"
   },
-  "author": "Sergey Zakharov (noC0ntest)",
+  "author": "Sergey Zakharov",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -15,9 +15,11 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
-    "webpack-dev-server": "^3.8.0"
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "file-loader": "^4.2.0",

@@ -1,0 +1,99 @@
+.fselect  {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    font-family: Arial, sans-serif;
+
+    &:before {
+        content: '\25bc';
+        width: 40px;
+        position: absolute;
+        right: 0;
+        top: 10px;
+        pointer-events: none;
+        text-align: center;
+        color: #333;
+        z-index: 1;
+    }
+
+    &:after {
+        content: '';
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        background-color: #ddd;
+        right: 41px;
+        top: 0;
+        pointer-events: none;
+    }
+
+    &-placeholder,
+    &-list,
+    &-input {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    &-placeholder,
+    &-input {
+        padding: 10px 40px 10px 13px;
+        border: 1px solid #ddd;
+        background-color: #fdfdfd;
+        cursor: pointer;
+        position: relative;
+        min-height: 40px;
+        user-select: none;
+    }
+
+    &-input {
+        font-family: "Noto Sans", Arial, sans-serif;
+    }
+
+    &-list {
+        display: block;
+        padding: 0;
+        list-style: none;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        font-size: 0;
+        position: absolute;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        max-height: 200px;
+        overflow: auto;
+        z-index: 9;
+
+        &-item {
+            padding: 10px 13px;
+            font-size: 16px;
+            cursor: pointer;
+
+            &--chosen {
+                background-color: #a9a9a9;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+            }
+
+            &:hover {
+                background-color: #f3f3f3;
+            }
+        }
+
+        &--opened {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    &--opens-up {
+        transform: translateY(-240px);
+        -webkit-transform: translateY(-240px);
+        -moz-transform: translateY(-240px);
+        -ms-transform: translateY(-240px);
+        -o-transform: translateY(-240px);
+    }
+}
