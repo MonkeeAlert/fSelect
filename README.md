@@ -16,17 +16,19 @@ or import it like module in `main.js`:<br/>
 ### Syntax
 FSelect gets 3 arguments: select element, object with options and callback function:
 
-`var fselect = new FSelect(document.getElementById('your-select'), {<br/>
-  type: 'select' || 'input',          //  default: 'select'<br/>
-  placeholder: 'Your placeholder',    //  default: first option<br/>
-  className: 'your-classname'         //  default: 'fselect'<br/>
-}, function() {<br/>
-  console.log('works!');<br/>
-}`
+```
+var fselect = new FSelect(document.getElementById('your-select'), {
+  type: 'select' || 'input',          //  default: 'select'
+  placeholder: 'Your placeholder',    //  default: first option
+  className: 'your-classname'         //  default: 'fselect'
+}, function() {
+  console.log('works!');
+}
+```
 
 ### Methods
 
-**destroySelect**<br/>
+**.destroySelect()**<br/>
 Destroys select instace:
 
 `FSelect.destroySelect(instance)`
